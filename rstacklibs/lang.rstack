@@ -1,0 +1,108 @@
+def dup
+  0 pick
+end
+
+def over
+  1 pick
+end
+
+def swap
+  1 roll
+end
+
+def rot
+  2 roll
+end
+
+def tuck
+  dup rot swap
+end
+
+def not
+  if 0 else 1 end
+end
+
+def or
+  if
+    drop 1
+  else
+    if 1 else 0 end
+  end
+end
+
+def and
+  if
+    if 1 else 0 end
+  else
+    drop 0
+  end
+end
+
+def xor
+  if
+    not
+  else
+    if 1 else 0 end
+  end
+end
+
+def !=
+  = not
+end
+
+def <=
+  over over
+  < if
+    drop drop 1
+  else
+    = if 1 else 0 end
+  end
+end
+
+def >=
+  over over
+  > if
+    drop drop 1
+  else
+    = if 1 else 0 end
+  end
+end
+
+def abs
+  dup 0 < if
+    0 swap -
+  end
+end
+
+def max
+  over over
+  < if swap end
+  drop
+end
+
+def min
+  over over
+  > if swap end
+  drop
+end
+
+def gcd
+  dup if dup end
+  if tuck % gcd end
+end
+
+def lcm
+  over over * abs rot rot gcd /
+end
+
+def p
+  dup .
+end
+
+def print
+  p cr
+end
+
+def dprint
+  . cr
+end
