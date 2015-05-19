@@ -1,5 +1,4 @@
-#ifndef _RSTR_H
-#define _RSTR_H
+#pragma once
 
 #include <string>
 #include <vector>
@@ -18,4 +17,3 @@ namespace rstr {
 
 }
 
-#endif

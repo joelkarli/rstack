@@ -1,8 +1,9 @@
-#ifndef _OBJECT_H_
-#define _OBJECT_H_
+#pragma once
 
 #include <typeinfo>
 #include <algorithm>
+
+// The code in this file is mostly copied from the boost libraries
 
 class Placeholder {
         
@@ -96,4 +97,3 @@ class Holder : public Placeholder {
     return static_cast<Holder<ValueType>* >(object.content)->held;
   }
 
-#endif

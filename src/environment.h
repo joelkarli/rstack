@@ -1,5 +1,4 @@
-#ifndef _ENVIRONMENT_H_
-#define _ENVIRONMENT_H_
+#pragma once
 
 #include <fstream>
 #include <sstream>
@@ -398,4 +397,3 @@ class Environment {
 
 };
 
-#endif

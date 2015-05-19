@@ -1,5 +1,4 @@
-#ifndef _WORD_H_
-#define _WORD_H_
+#pragma once
 
 #include <iostream>
 #include <vector>
@@ -303,5 +302,3 @@ class RollWord : public Word {
     }
 
 };
-
-#endif
